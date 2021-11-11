@@ -1,7 +1,15 @@
+import styled from "styled-components";
+import "../src/styles/global.scss"
+
+const Title = styled.h1`
+  font-size: 64px;
+  color: var(--blue);
+`
+
 export function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Title>Hello World</Title>
     </div>
   );
 }
