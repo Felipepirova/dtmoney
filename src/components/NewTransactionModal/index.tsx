@@ -4,6 +4,7 @@ import closeImg from '../../assets/close.svg'
 import outcomeImg from '../../assets/arrow-down.svg'
 import incomeImg from '../../assets/arrow-up.svg'
 import { FormEvent, useState } from 'react'
+import { api } from '../../services/api'
 
 Modal.setAppElement('#root') //acessibility
 
@@ -24,12 +25,14 @@ export function NewTransactionModal({
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault()
 
-    console.log({
+    const data = {
       title,
       value,
       category,
       type
-    })
+    }
+
+    api.post('/transactions', data)
   }
 
   return (
