@@ -1,10 +1,15 @@
 import arrowUpImg from '../../assets/arrow-up.svg'
 import arrowDownImg from '../../assets/arrow-down.svg'
 import arrowMoneyImg from '../../assets/money.svg'
-import { Container } from "./style";
+import { Container } from './style'
+import { useContext } from 'react'
+import { TransactionsContext } from '../../TransactionsContext'
 
-export function Summary(){
-  return(
+export function Summary() {
+  const { transactions } = useContext(TransactionsContext)
+  console.log(transactions)
+
+  return (
     <Container>
       <div>
         <header>

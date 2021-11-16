@@ -18,6 +18,14 @@ createServer({
           category: 'Dev',
           amount: 6000,
           createAt: new Date('2021-02-12 09:00:00')
+        },
+        {
+          id: 2,
+          title: 'Serviços de Formatação',
+          type: 'deposit',
+          category: 'Dev',
+          amount: 1000,
+          createAt: new Date('2021-02-12 09:00:00')
         }
       ]
     })
